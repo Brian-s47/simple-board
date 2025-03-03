@@ -1,0 +1,17 @@
+[
+    {
+        "USER" : "Miguelito@gmail.com",
+        "PWD" : "123",
+        "ROL" : "Admin"
+    },
+    {
+        "USER" : "Brian@gmail.com",
+        "PWD" : "456",
+        "ROL" : "Admin"
+    },
+    {
+        "USER" : "Issac@gmail.com",
+        "PWD" : "789",
+        "ROL" : "Admin"
+    }
+]
