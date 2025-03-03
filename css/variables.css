@@ -1,0 +1,25 @@
+:root{
+    --color-1: #6C6C6C;
+    --color-2: #FFFFFF;
+    --color-3: #000000;
+    --color-4: #CDCDCD;
+    --color-5: #E5E5E5;
+    --color-7: #FEAF00;
+    --color-8: #F8D442;
+    --color-9: #C4C4C4;
+    --color-10: #74C1ED;
+    --color-11: #E5E5E5;
+    --color-12: #EE95C5;
+    --color-13: #F0F9FF;
+    --color-14: #F2EAE1;
+    --color-15: #F6C762;
+    --color-16: #FDFDFD;
+    --color-17: #FEF6FB;
+    --color-18: #FEFBEC;
+    --color-19: #ACACAC;
+    --color-20: #F8F8F8;
+}
+@font-face {
+    font-family: "example";
+    src: url(../storage/font/example.ftt);
+}
