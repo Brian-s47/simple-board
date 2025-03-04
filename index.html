@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer type="module"></script>
     <title>Sign In</title>
 </head>
 <body>
+    <dialog id="dialog__login">
+        <div class="dialog__header">
+            <span id="dialog__login_close">X</span>
+        </div>
+        <div id="dialog__message" class="dialog__main">
+            
+        </div>
+        <div class="dialog__footer"></div>
+    </dialog>
     <section>
         <form id="form__login" action="?" method="get">
             <div class="div__title">
@@ -31,6 +40,8 @@
             </div>
         </form>
     </section>
-    
 </body>
 </html>
+
+
+
