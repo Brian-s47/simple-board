@@ -13,9 +13,6 @@
     padding-top: 20px;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 .div__title {
     display: flex;
@@ -111,122 +108,34 @@
     font-size: 14px;
     color: var(--color-3);
 }
-/************************************* CSS Dialog *****************************************************************/
-#dialog__login {
-    border: none !important;
-    border-radius: 15px;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    padding: 1.6rem;
-    width: 500px;
-    margin: auto;
-}
-.dialog__header{
-    display: flex;
-    justify-content: flex-end;
-}
-.dialog__header span{
-    cursor: pointer;
-}
-#form__login{
-    background: orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.div__title{
-    background: violet;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 19px;
-}
-.div__input{
-    background: blue;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.div__input div{
-    background: green;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.div__button{
-    background: beige;
-    display: flex;
-    flex-direction: column;
-}
-/************************************* Stutend List*************************************************************/
-.div__container {
-    width: 90%;
-    margin: auto;
-}
-.div__header{
-    background-color: #f9f9f9;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-}
-.div__header h2 {
-    font-size: 24px;
-}
-.button__add {
-    background-color: #ededed;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.button__add:hover {
-    background-color: #747474;
-}
-#dialog__add_student{
-    margin: auto;
-}
-.dialog__header{
-    display: flex;
-    justify-content: flex-end;
-}
-.dialog__header > span{
-    cursor: pointer;
-    padding: 5px;
-    border: 1px solid #000;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color:#000;
-}
-th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-th {
-    background-color: #f9f9f9;
-    font-weight: bold;
-}
-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.td__actions {
-    display: flex;
-    gap: 10px;
-}
-.span__edit, .span__delete {
-    cursor: pointer;
-}
-.span__edit {
-    color: #f4a261;
-}
-.span__delete {
-    color: #e63946;
+
+@media (max-width: 480px) {
+    .left__nav {
+        max-width: 150px;
+    }
+    
+    .div__title h1 {
+        font-size: 10px;
+    }
+    .div__UserInfo {
+        margin-bottom: 20px;
+    
+    }
+    .div__UserInfo img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    .div__buttoms {
+        max-width: 143px;
+        gap: 15px;
+    }
+    .div__buttoms a, .div__logout a {
+        font-size: 12px;
+        height: 40px;
+        grid-template-columns: 50px 80px;   
+    }
+    .div__logout {
+        margin-top: 30px;
+        max-width: 143px;
+    }
 }
