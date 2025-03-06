@@ -4,10 +4,68 @@
     padding: 0;
     box-sizing: border-box;
 } 
+/****************************** body  ******************************/
 body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 270px repeat(4, 1fr);
+    grid-template-rows: 60px repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+/****************************** Header  ******************************/
+.Section__header{
+    background: red;
+    /* background: var(--color-2); */
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    height: 60px;
+}
+.div__rightArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 27px;   
+}
+.div__search{
+    /* background: green; */
+    display: flex;
+    place-items: center;
+    max-width: 212px;
+    width: 100%;
+    height: 37px;
+    padding: 14px;
+    border: 1px solid var(--color-5);
+    border-radius: 8px;
+}
+.div__search input{
+    border-style: none;
+    font-family: "Montserrat-Regular";
+    width: 150px;
+    font-size: 14px;
+    color: var(--color-5);
+}
+.Section__header img{
+
+}
+#img__search{
+    width: 14px;
+    height: 14px;
+}
+#img__back{
+    width: 18px;
+    height: 18px;
+}
+#img__Vector{
+    width: 17px;
+    height: 20px;
+}
+/****************************** NAV  ******************************/
 .left__nav {
+    grid-area: 1 / 1 / 6 / 2;
     background: var(--color-14);
     max-width: 270px;
     width: 100%;
@@ -115,11 +173,18 @@ body {
 
 /****************************** Main ******************************/
 main{
+    grid-area: 2 / 2 / 6 / 6;
     width: 100%;
-    background: rgb(0, 208, 255);
+    /* background: rgb(0, 208, 255); */
+    /* background: var(--color16); */
+    background: blue        ;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
+    justify-content: center;
+    padding-top: 50px;
+    /* align-items: center; */
 }
 /*********************** div__container ***************************/
 .div__container{
@@ -177,8 +242,6 @@ main{
 #payment > strong::before{
     content: attr(data-format);
 }
-
-
 /*----------------------------- Responsive ----------------------*/
 @media (max-width: 480px) {
     .left__nav {
