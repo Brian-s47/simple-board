@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}  
+}
+/************************************** NAV ***********************************************************************/
 .left__nav {
     background: var(--color-14);
     max-width: 270px;
@@ -108,7 +109,7 @@
     font-size: 14px;
     color: var(--color-3);
 }
-
+/************************************** Responsive **************************************************************/
 @media (max-width: 480px) {
     .left__nav {
         max-width: 150px;
@@ -139,6 +140,7 @@
         max-width: 143px;
     }
 }
+/************************************** Dialog Agregar Estudiante *************************************************/
 .div__container {
     width: 90%;
     margin: auto;
@@ -174,6 +176,7 @@
     padding: 5px;
     border: 1px solid #000;
 }
+/********************************************** Table **************************************************************/
 table {
     width: 100%;
     border-collapse: collapse;

@@ -1,3 +1,4 @@
+import {enableFromStudent} from "./handler.js";
 // Traer los datos del local storage validando de que si existe los devuelva en formato JSON y si no existe crear un objeto vacio en el local storage, y lo retorna guardado en DB
 export const loadStudent = ()=>{
     const DB = (localStorage.getItem("students")) ? JSON.parse(localStorage.getItem("students")) : [];
@@ -10,6 +11,18 @@ export const save = (data)=>{
     showRowsTable([data]);
     localStorage.setItem("students", JSON.stringify(DB));
     return {status: 201, message: `El estudiante ${data.name} fue registrado exitosamente.`}
+}
+export const edit = (data)=>{
+    const DB = loadStudent(); // [{name: "Miguel"},{name "Juan"}]
+    const {id} = data;  // {id: 1, name:"JUAN"} - const id = 1
+    delete data.id; // {name:"JUAN"}
+    DB[id] = data; // {name "Juan"} = {name:"JUAN"}
+    localStorage.setItem("students", JSON.stringify(DB));
+    const row = table__student.querySelectorAll("tr")[id];
+    row.children[1].textContent = data.name;
+    row.children[2].textContent = data.email;
+    row.children[3].textContent = data.phone;
+    row.children[4].textContent = data.enroll_number;
 }
 // Tomar los datos del formulario convertilos a un formato de objeto y cambiar el tipo de variavble de string a numero y fecha segun correcponde
 export const transformInputFormulary =  (e)=>{
@@ -38,25 +51,30 @@ export const showRowsTable = (DB)=>{
         tdEnrollNumber.textContent = DB[i].enroll_number;
         const tdDate_of_admission = document.createElement("td");
         tdDate_of_admission.textContent = DB[i].date_of_admission;
-        tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission);
+        const tdActions = document.createElement("td");
+        const spanEdit = document.createElement("span");
+        spanEdit.classList.add("span__edit");
+        spanEdit.textContent = "✏️";
+        spanEdit.dataset.id_student = i;
+        spanEdit.addEventListener("click", enableFromStudent)
+        const spanDelete = document.createElement("span");
+        spanDelete.classList.add("span__delete");
+        spanDelete.textContent = "🗑️";
+        tdDate_of_admission.textContent = DB[i].date_of_admission;
+        tdActions.append(spanEdit, spanDelete);
+        tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission, tdActions);
         table__student.append(tr);
     }
-    // let plantilla = "";
-    // for (let i = 0; i < DB.length; i++) {
-    //     plantilla += `
-    //         <tr>
-    //             <td><img src="#" alt="student"></td>
-    //             <td>Karthi</td>
-    //             <td>karthi@gmmail.com</td>
-    //             <td>7305477760</td>
-    //             <td>1234567305477760</td>
-    //             <td>08-Dec, 2021</td>
-    //             <td class="td__actions">
-    //                 <span class="span__edit">✏️</span>
-    //                 <span class="span__delete">🗑️</span>
-    //             </td>
-    //         </tr>
-    //     `;
-    // }
-    // console.log(plantilla);
+    // <tr>
+    //   <td><img src="#" alt="student"></td>
+    //   <td>Karthi</td>
+    //   <td>karthi@gmmail.com</td>
+    //   <td>7305477760</td>
+    //   <td>1234567305477760</td>
+    //   <td>08-Dec, 2021</td>
+    //   <td class="td__actions">
+    //         <span class="span__edit">✏️</span>
+    //         <span class="span__delete">🗑️</span>
+    //       </td>
+    // </tr>
 }
