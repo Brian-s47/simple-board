@@ -38,8 +38,9 @@ export const showRowsTable = (DB)=>{
         const tdImage = document.createElement("td");
 
         const imgStudent = document.createElement("img");
-        imgStudent.src = "#"
+        imgStudent.src = "../storage/img/photo.png"
         imgStudent.alt = "student";
+        imgStudent.id = "photo";
         tdImage.append(imgStudent);
 
         const tdName = document.createElement("td");
@@ -65,7 +66,8 @@ export const showRowsTable = (DB)=>{
         imgPen.alt = "Pen";
 
         spanEdit.classList.add("span__edit");
-        spanEdit.textContent = imgPen;
+        // spanEdit.textContent = imgPen;
+        spanEdit.appendChild(imgPen); //Usar appendChild() en este caso es fundamental porque define la relación padre-hijo entre los elementos HTML.
         spanEdit.dataset.id_student = i;
         spanEdit.addEventListener("click", enableFromStudentToEdit)
 
@@ -75,7 +77,8 @@ export const showRowsTable = (DB)=>{
         imgtrash.alt = "trash";
 
         spanDelete.classList.add("span__delete");
-        spanDelete.textContent = "";
+        // spanDelete.textContent = "imgtrash";
+        spanDelete.appendChild(imgtrash);//Usar appendChild() en este caso es fundamental porque define la relación padre-hijo entre los elementos HTML.
         spanDelete.dataset.id_student = i;
         spanDelete.dataset.name_student = DB[i].name;
         spanDelete.addEventListener("click", enableFromStudentToDelete)
@@ -92,8 +95,8 @@ export const showRowsTable = (DB)=>{
     //   <td>1234567305477760</td>
     //   <td>08-Dec, 2021</td>
     //   <td class="td__actions">
-    //         <span class="span__edit">✏️</span>
-    //         <span class="span__delete">🗑️</span>
+    //         <span class="span__edit"><img id="photo" src="../storage/img/pen.png"></span>
+    //         <span class="span__delete"><img id="photo" src="../storage/img/trash.png"></span>
     //       </td>
     // </tr>
 }
