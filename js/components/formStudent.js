@@ -54,12 +54,12 @@ export const showRowsTable = (DB)=>{
         const tdActions = document.createElement("td");
         const spanEdit = document.createElement("span");
         spanEdit.classList.add("span__edit");
-        spanEdit.textContent = "✏️";
+        spanEdit.textContent = "✏️     ";
         spanEdit.dataset.id_student = i;
         spanEdit.addEventListener("click", enableFromStudent)
         const spanDelete = document.createElement("span");
         spanDelete.classList.add("span__delete");
-        spanDelete.textContent = "🗑️";
+        spanDelete.textContent = "     🗑️";
         tdDate_of_admission.textContent = DB[i].date_of_admission;
         tdActions.append(spanEdit, spanDelete);
         tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission, tdActions);
