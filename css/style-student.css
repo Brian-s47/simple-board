@@ -204,7 +204,8 @@ main{
     background-color: #747474;
 }
 #dialog__add_student,
-#dialog__student_edit{
+#dialog__student_edit,
+#dialog__student_delete{
     margin: auto;
     font-family: "Montserrat-Medium";
     font-size: 14px;
@@ -300,8 +301,6 @@ th {
 .span__delete {
     color: #e63946;
 }
-
-
 /*----------------------------- Responsive ----------------------*/
 @media (max-width: 480px) {
     body {

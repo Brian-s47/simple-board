@@ -1,5 +1,5 @@
 import {loadStudent} from "./formStudent.js";
-export const enableFromStudent = (e)=>{
+export const enableFromStudentToEdit = (e)=>{
     const span = e.target;
     const DB = loadStudent();
     const infoStudent = DB[span.dataset.id_student];
@@ -17,4 +17,11 @@ export const enableFromStudent = (e)=>{
         // }
         input[i].value = infoStudent[input[i].name];
     }
+}
+export const enableFromStudentToDelete = (e)=>{
+    const input = form__student_delete.querySelector("input[name='id']");
+    const strong = form__student_delete.querySelector("strong");
+    input.value = e.target.dataset.id_student;
+    strong.textContent = e.target.dataset.name_student;
+    dialog__student_delete.showModal();
 }

@@ -1,4 +1,4 @@
-import {enableFromStudent} from "./handler.js";
+import {enableFromStudentToEdit, enableFromStudentToDelete} from "./handler.js";
 // Traer los datos del local storage validando de que si existe los devuelva en formato JSON y si no existe crear un objeto vacio en el local storage, y lo retorna guardado en DB
 export const loadStudent = ()=>{
     const DB = (localStorage.getItem("students")) ? JSON.parse(localStorage.getItem("students")) : [];
@@ -32,35 +32,54 @@ export const transformInputFormulary =  (e)=>{
     data.date_of_admission = new Date().toISOString();
     return data;
 }
-
 export const showRowsTable = (DB)=>{
     for (let i = 0; i < DB.length; i++) {
         const tr = document.createElement("tr");
         const tdImage = document.createElement("td");
+
         const imgStudent = document.createElement("img");
         imgStudent.src = "#"
         imgStudent.alt = "student";
         tdImage.append(imgStudent);
+
         const tdName = document.createElement("td");
         tdName.textContent = DB[i].name;
+
         const tdEmail = document.createElement("td");
         tdEmail.textContent = DB[i].email;
+
         const tdPhone = document.createElement("td");
         tdPhone.textContent = DB[i].phone;
+
         const tdEnrollNumber = document.createElement("td");
         tdEnrollNumber.textContent = DB[i].enroll_number;
+
         const tdDate_of_admission = document.createElement("td");
         tdDate_of_admission.textContent = DB[i].date_of_admission;
+
         const tdActions = document.createElement("td");
         const spanEdit = document.createElement("span");
+
+        const imgPen = document.createElement("img");
+        imgPen.src = "../storage/img/pen.png"
+        imgPen.alt = "Pen";
+
         spanEdit.classList.add("span__edit");
-        spanEdit.textContent = "✏️     ";
+        spanEdit.textContent = imgPen;
         spanEdit.dataset.id_student = i;
-        spanEdit.addEventListener("click", enableFromStudent)
+        spanEdit.addEventListener("click", enableFromStudentToEdit)
+
         const spanDelete = document.createElement("span");
+        const imgtrash = document.createElement("img");
+        imgtrash.src = "../storage/img/trash.png"
+        imgtrash.alt = "trash";
+
         spanDelete.classList.add("span__delete");
-        spanDelete.textContent = "     🗑️";
-        tdDate_of_admission.textContent = DB[i].date_of_admission;
+        spanDelete.textContent = "";
+        spanDelete.dataset.id_student = i;
+        spanDelete.dataset.name_student = DB[i].name;
+        spanDelete.addEventListener("click", enableFromStudentToDelete)
+
         tdActions.append(spanEdit, spanDelete);
         tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission, tdActions);
         table__student.append(tr);
