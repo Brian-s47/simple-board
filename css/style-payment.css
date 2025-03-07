@@ -15,7 +15,6 @@ body {
 /****************************** Header  ******************************/
 .Section__header{
     background: var(--color-2); 
-    /* background: var(--color-2); */
     grid-area: 1 / 2 / 2 / 6;
     display: flex;
     justify-content: space-between;
@@ -50,7 +49,7 @@ body {
     color: var(--color-5);
 }
 .Section__header img{
-
+    cursor: pointer;
 }
 #img__search{
     width: 14px;
@@ -64,6 +63,7 @@ body {
     width: 17px;
     height: 20px;
 }
+/****************************** NAV  ******************************/
 /****************************** NAV  ******************************/
 .left__nav {
     grid-area: 1 / 1 / 6 / 2;
@@ -174,18 +174,113 @@ body {
 
 /****************************** Main ******************************/
 main{
-    grid-area: 2 / 2 / 6 / 6;
-    width: 100%;
-    min-height: 100%;
-
-    /* background: rgb(0, 208, 255); */
-    background: var(--color-16); 
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    flex-grow: 1;
+    flex-direction: column;
+}
+/****************************** Main-Header ******************************/
+.div__header{
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.div__header h2 {
+    font-size: 22px;
+    font-family: "Montserrat-Bold";
+}
+.div__headerButton{
+    display: flex;
+    align-items: center;
+}
+.div__headerButton img{
+    width: 14px;
+    height: 22px;
+    cursor: pointer;
+}
+/****************************** Main-Table ******************************/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color:#acacac;
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+    color: var(--color-3);
+    
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    /* background-color: #701e1e; */
+    font-family: "Montserrat-SemiBold";
+    font-size: 12px;
+    color: var(--color-19);
+}
+/*----------------------------- Responsive ----------------------*/
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 160px repeat(4, 1fr);
+        grid-template-rows: 55px repeat(4, 1fr);
+        min-height: 105dvh;
 
-    justify-content: center;
-    padding-top: 50px;
-    /* align-items: center; */
-}  
+    }
+    .div__search{
+        max-width: 152px;
+        width: 100%;
+        height: 37px;
+        padding: 14px;
+    }
+    .div__search input{
+        width: 100px;
+
+    }
+    main{
+        width: 100%;
+        gap: 15px;
+        padding-top: 20px;
+    }
+    .Section__header{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 98%;
+
+    }
+    .left__nav {
+        max-width: 150px;
+        height: 150svh;
+    }
+    
+    .div__title h1 {
+        font-size: 10px;
+    }
+    .div__UserInfo {
+        margin-bottom: 20px;
+    
+    }
+    .div__UserInfo img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    .div__buttoms {
+        max-width: 143px;
+        gap: 15px;
+    }
+    .div__buttoms a, .div__logout a {
+        font-size: 12px;
+        height: 40px;
+        grid-template-columns: 50px 80px;   
+    }
+    .div__logout {
+        margin-top: 30px;
+        max-width: 143px;
+    }
+    .div__container{
+        max-height: 137px;
+        height: 100%;
+    }
+}

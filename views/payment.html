@@ -15,14 +15,13 @@
                 <input type="text" placeholder="search...">
                 <img id="img__search" src="../storage/img/search.png">
             </div>
-            <img id="img__Vector" src="../storage/img/Vector.svg">
+            <img id="img__Vector" src="../storage/img/Vector.png">
         </div>
     </header>
     <nav class="left__nav">
         <div class="div__title">
             <h1><img src="/storage/img/Line.png" alt=""> CRUD OPERATIONS</h1>
         </div>
-
         <div class="div__UserInfo">
             <img src="/storage/img/photo.png">
             <h2>Karthi Madesh</h2>
@@ -34,11 +33,35 @@
             <a href="#"><img src="/storage/img/graduation-cap.svg" alt=""> Students</a>
             <a href="#"><img src="/storage/img/usd-square1.svg" alt=""> Payment</a>
             <a href="#"><img src="/storage/img/file-chart-line.svg" alt=""> Report</a>
-            <a href="#"><img src="/storage/img/sliders.svg" alt=""> Settings</a> 
+            <a href="#"><img src="/storage/img/sliders.svg" alt=""> Settings</a>
         </div>
         <div class="div__logout">
             <a href="#">Logout <img src="/storage/img/log-out.svg" alt=""></a>
         </div>
-    </nav>    
+    </nav>
+    <main>
+        <div class="div__container">
+            <div class="div__header">
+                <h2>Payment Details</h2>
+                <div class="div__headerButton">
+                    <img src="../storage/img/sort.png">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Payment Schedule</th>
+                        <th>Bill Number</th>
+                        <th>Amount Paid</th>
+                        <th>Balance amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="table__student">
+                </tbody>
+            </table>
+        </div>
+    </main>   
 </body>
 </html>
