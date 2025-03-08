@@ -82,9 +82,20 @@ export const showRowsTable = (DB)=>{
         spanDelete.dataset.id_student = i;
         spanDelete.dataset.name_student = DB[i].name;
         spanDelete.addEventListener("click", enableFromStudentToDelete)
-
+        //Variables de paid
+        const amountPaid = [{
+                        payment_schedule : "",
+                        bill_number : "0",
+                        coin : "INR",
+                        value : "",
+                        date : ""
+        }];
+        const balanceAmount = [{
+            coin : "INR",
+            value : "90,000",
+}];
         tdActions.append(spanEdit, spanDelete);
-        tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission, tdActions);
+        tr.append(tdImage, tdName, tdEmail, tdPhone, tdEnrollNumber, tdDate_of_admission, tdActions, amountPaid, balanceAmount);
         table__student.append(tr);
     }
     // <tr>
@@ -99,4 +110,22 @@ export const showRowsTable = (DB)=>{
     //         <span class="span__delete"><img id="photo" src="../storage/img/trash.png"></span>
     //       </td>
     // </tr>
+    //     {
+    //        name: "Miguel Angel", 
+    //        email: "ma@gmail.com", 
+    //        phone: 123456789, 
+    //        enroll_number: 3456789,
+    //        amount_paid : [
+    //                     payment_schedule : "First",
+    //                     bill_number : 00012223,
+    //                     coin : "INR",
+    //                     value : 35,000,
+    //                     date : "08-Dec-2021"
+    //                  ],
+    //        balance_amount : [
+    //                 coin : "INR",
+    //                 value : 55,000
+    //              ],
+    //     }
+    //  ]
 }
