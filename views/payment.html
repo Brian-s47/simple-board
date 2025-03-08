@@ -45,8 +45,26 @@
                 <h2>Payment Details</h2>
                 <div class="div__headerButton">
                     <img src="../storage/img/sort.png">
+                    <button id="add__paid" class="button__add">ADD NEW PAID</button>
                 </div>
             </div>
+            <dialog id="dialog__add_paid">
+                <div class="dialog__header">
+                    <span id="dialog__close">X</span>
+                </div>
+                <h2>Add new Paid</h2><br>
+                <div class="dialog__main">
+                    <form id="form__paid" action="?" method="post">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" value="Miguel Angel" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü ]+" name="name">
+                        </div>
+                    </form>
+                </div>
+                <div class="dialog__footer">
+                    <input type="submit" form="form__student" value="Buscar">
+                </div>
+            </dialog>
             <table>
                 <thead>
                     <tr>
@@ -58,7 +76,7 @@
                         <th>Date</th>
                     </tr>
                 </thead>
-                <tbody id="table__student">
+                <tbody id="table__payment">
                 </tbody>
             </table>
         </div>

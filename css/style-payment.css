@@ -64,7 +64,6 @@ body {
     height: 20px;
 }
 /****************************** NAV  ******************************/
-/****************************** NAV  ******************************/
 .left__nav {
     grid-area: 1 / 1 / 6 / 2;
     background: var(--color-14);
@@ -197,6 +196,30 @@ main{
     width: 14px;
     height: 22px;
     cursor: pointer;
+}
+.div__headerButton{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.div__headerButton img{
+    width: 14px;
+    height: 22px;
+    cursor: pointer;
+}
+.button__add {
+    background-color: var(--color-7);
+    color: var(--color-2);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+
+}
+.button__add:hover {
+    background-color: #747474;
 }
 /****************************** Main-Table ******************************/
 table {
