@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-payment.css">
-    <script src="../js/dashboard.js" defer type="module"></script>
+    <script src="../js/payment.js" defer type="module"></script>
     <title>Payment</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
                     <button id="add__paid" class="button__add">ADD NEW PAID</button>
                 </div>
             </div>
-            <dialog id="dialog__add_paid">
+            <dialog id="dialog__add_paid" >
                 <div class="dialog__header">
                     <span id="dialog__close">X</span>
                 </div>
@@ -59,10 +59,30 @@
                             <label>Name</label>
                             <input type="text" value="Miguel Angel" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü ]+" name="name">
                         </div>
+                        <div>
+                            <label for="">Payment Schedule</label>
+                            <input type="text" name="payment_schedule" value="First" placeholder="Payment Schedule">
+                        </div>
+                        <div>
+                            <label for="">Bill Number</label>
+                            <input type="number" name="bill_number" value="00012223" placeholder="Bill Number">
+                        </div>
+                        <div>
+                            <label for="">Amount</label>
+                            <input type="number" name="amount" value="50000" placeholder="Amount">
+                        </div>
+                        <div>
+                            <label for="">Balance amount</label>
+                            <input type="number" id="balance_amount" value="INR 35,000" name="balance_amount" placeholder="Balance Amount" readonly>
+                        </div>
+                        <div>
+                            <label for="">Date</label>
+                            <input type="date" name="date" placeholder="Date">
+                        </div>
                     </form>
                 </div>
                 <div class="dialog__footer">
-                    <input type="submit" form="form__student" value="Buscar">
+                    <input type="submit" form="form__student" value="Ingresar pago">
                 </div>
             </dialog>
             <table>
