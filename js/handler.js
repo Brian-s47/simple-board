@@ -1,4 +1,5 @@
 import {loadStudent} from "./formStudent.js";
+
 export const enableFromStudentToEdit = (e)=>{
     const span = e.target;
     const DB = loadStudent();
@@ -18,6 +19,7 @@ export const enableFromStudentToEdit = (e)=>{
         input[i].value = infoStudent[input[i].name];
     }
 }
+
 export const enableFromStudentToDelete = (e)=>{
     const input = form__student_delete.querySelector("input[name='id']");
     const strong = form__student_delete.querySelector("strong");

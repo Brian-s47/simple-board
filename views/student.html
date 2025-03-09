@@ -43,7 +43,11 @@
         <div class="div__container">
             <div class="div__header">
                 <h2>Students List</h2>
-                <button id="add__student" class="button__add">ADD NEW STUDENT</button>
+                <div>
+                    <button class="sort__button"><img src="../storage/img/sort.png" alt=""></button>
+                    <button id="add__student" class="button__add">ADD NEW STUDENT</button>
+                </div>
+                
             </div>
             <dialog id="dialog__add_student">
                 <div class="dialog__header">
@@ -54,19 +58,19 @@
                     <form id="form__student" action="?" method="post">
                         <div>
                             <label>Name</label>
-                            <input type="text" value="Miguel Angel" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü ]+" name="name">
+                            <input type="text"  pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü ]+" name="name">
                         </div>
                         <div>
                             <label>Email</label>
-                            <input type="email" value="ma@gmail.com" name="email">
+                            <input type="email"  name="email">
                         </div>
                         <div>
                             <label>Phone</label>
-                            <input type="text" value="123456789" pattern="[0-9]+" max="10" name="phone">
+                            <input type="text" pattern="[0-9]+" max="10" name="phone">
                         </div>
                         <div>
                             <label>Enroll Number</label>
-                            <input type="number" value="34567890" name="enroll_number">
+                            <input type="number"  name="enroll_number" > 
                         </div>
                     </form>
                 </div>
@@ -108,6 +112,22 @@
                 </div>
                 <div class="dialog__footer">
                     <input type="submit" form="form__student_edit" value="Actualizar">
+                </div>
+            </dialog>
+            <dialog id="dialog__student_delete">
+                <div class="dialog__header">
+                    
+                </div>
+                <div class="dialog__main">
+                    <form id="form__student_delete" action="?" method="post">
+                        <h2>Do you want to delete student information?</h2> 
+                        <input type="text" pattern="[0-9]+" name="id" hidden> <br>
+                        <strong>xxxxxxx</strong>
+                    </form>
+                </div>
+                <div class="dialog__footer">
+                    <input type="submit" data-action="delete" form="form__student_delete" value="yes">
+                    <input type="submit" data-action="close" form="form__student_delete" value="no">
                 </div>
             </dialog>
             <table>
