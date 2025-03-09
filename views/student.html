@@ -15,7 +15,7 @@
                 <input type="text" placeholder="search...">
                 <img id="img__search" src="../storage/img/search.png">
             </div>
-            <img id="img__Vector" src="../storage/img/Vector.png">
+            <img id="img__Vector" src="../storage/img/Vector.svg">
         </div>
     </header>
     <nav class="left__nav">
@@ -43,10 +43,7 @@
         <div class="div__container">
             <div class="div__header">
                 <h2>Students List</h2>
-                <div class="div__headerButton">
-                    <img src="../storage/img/sort.png">
-                    <button id="add__student" class="button__add">ADD NEW STUDENT</button>
-                </div>
+                <button id="add__student" class="button__add">ADD NEW STUDENT</button>
             </div>
             <dialog id="dialog__add_student">
                 <div class="dialog__header">
@@ -113,25 +110,10 @@
                     <input type="submit" form="form__student_edit" value="Actualizar">
                 </div>
             </dialog>
-            <dialog id="dialog__student_delete">
-                <div class="dialog__header">                   
-                </div>
-                <div class="dialog__main">
-                    <form id="form__student_delete" action="?" method="post">
-                        <h2>Deseas eliminar la informacion del estidiante</h2>
-                        <input type="text" pattern="[0-9]+" name="id" hidden>
-                        <strong>xxxxxxx</strong>
-                    </form>
-                </div>
-                <div class="dialog__footer">
-                    <input type="submit" data-action="delete" form="form__student_delete" value="yes">
-                    <input type="submit" data-action="close" form="form__student_delete" value="no">
-                </div>
-            </dialog>
             <table>
                 <thead>
                     <tr>
-                        <th>     </th>
+                        <th>Photo</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
