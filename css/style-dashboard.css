@@ -3,4 +3,383 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}  
+} 
+/****************************** body  ******************************/
+body {
+    
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 270px 1fr;
+    min-height: 120dvh;
+}
+/****************************** Header  ******************************/
+.Section__header{
+    background: var(--color-2); 
+    /* background: var(--color-2); */
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 100%;
+    height: 60px;
+}
+.div__rightArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 27px;   
+}
+.div__search{
+    /* background: green; */
+    display: flex;
+    place-items: center;
+    max-width: 212px;
+    width: 100%;
+    height: 37px;
+    padding: 14px;
+    border: 1px solid var(--color-5);
+    border-radius: 8px;
+}
+.div__search input{
+    border-style: none;
+    font-family: "Montserrat-Regular";
+    width: 150px;
+    font-size: 14px;
+    color: var(--color-5);
+}
+.Section__header img{
+
+}
+#img__search{
+    width: 14px;
+    height: 14px;
+}
+#img__back{
+    width: 18px;
+    height: 18px;
+}
+#img__Vector{
+    width: 17px;
+    height: 20px;
+}
+/****************************** NAV  ******************************/
+.left__nav {
+    grid-area: 1 / 1 / 6 / 2;
+    background: var(--color-14);
+    max-width: 270px;
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.div__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.div__title h1{
+    font-size: 20px;
+    font-family: "Montserrat-Bold";
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: var(--color-3);
+}
+.div__UserInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 94px;
+
+}
+.div__UserInfo img{
+    margin-top: 54px;
+    max-width: 141px;
+    width: 100%;
+    border-radius: 100px;
+}
+.div__UserInfo h2{
+    font-size: 17px;
+    font-family: "Montserrat-Bold";
+    color: var(--color-3);
+
+}
+.div__UserInfo p{
+    font-size: 14px;
+    font-family: "Montserrat-Medium";
+    color: var(--color-7);
+
+}
+.div__buttoms {
+    max-width: 193px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.div__buttoms a{
+    max-width: 193px;
+    width: 100%;
+    height: 44px;
+    /* background-color: red; */
+    display: grid;
+    place-items: center;
+    grid-template-columns: 70px 80px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    color: var(--color-3);
+}
+.div__buttoms a img {
+    position: relative;
+    left: 20px;
+}
+.div__buttoms a:hover{
+    background: var(--color-7);
+}
+.div__logout {
+    margin-top: 80px;
+    max-width: 193px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.div__logout a {
+    max-width: 193px;
+    width: 100%;
+    height: 44px;
+    /* background-color: red; */
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    justify-content: end;
+    grid-template-columns: 70px 70px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    color: var(--color-3);
+}
+
+
+/****************************** Main ******************************/
+main{
+    grid-area: 2 / 2 / 6 / 6;
+    width: 100%;
+    min-height: 100%;
+
+    /* background: rgb(0, 208, 255); */
+    background: var(--color-16); 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-grow: 1;
+
+    justify-content: center;
+    padding-top: 50px;
+    /* align-items: center; */
+}
+/*********************** div__container ***************************/
+.div__container{
+    max-width: 255px;
+    width: 90%;
+    max-height: 157px;
+    height: 100%;
+    display: flex;
+    border-radius: 8px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.div__container div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.div__container strong {
+    font-size: 30px;
+    font-family: "Montserrat-Bold";
+
+}
+#students {
+    background: var(--color-13);
+}
+#course{
+    background: var(--color-17);
+}
+#payments{
+    background: var(--color-18);
+}
+#users{
+    background: linear-gradient(139deg, var(--color-7) , var(--color-8));
+}
+/**************************** Imagenes ***************************/
+#graduate{
+    width: 48px;
+    height: 28px;
+}
+#bookmark{
+    width: 28px;
+    height: 35px;
+}
+#usd-square{
+    width: 35px;
+    height: 40px;
+}
+#user{
+    width: 34px;
+    height: 34px;
+}
+/**************************** Textos ***************************/
+.div__container div span{
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    color: var(--color-1);
+}
+/************************** Cambio de Moneda ********************/
+#payment > strong{
+    position: relative;
+}
+#payment > strong::before{
+    content: attr(data-format);
+}
+/*----------------------------- Responsive ----------------------*/
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 160px repeat(4, 1fr);
+        grid-template-rows: 55px repeat(4, 1fr);
+        min-height: 105dvh;
+
+    }
+    .div__search{
+        max-width: 152px;
+        width: 100%;
+        height: 37px;
+        padding: 14px;
+    }
+    .div__search input{
+        width: 100px;
+
+    }
+    main{
+        width: 100%;
+        gap: 15px;
+        padding-top: 20px;
+    }
+    .Section__header{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 98%;
+
+    }
+    .left__nav {
+        max-width: 150px;
+        height: 100%;
+    }
+    
+    .div__title h1 {
+        font-size: 10px;
+    }
+    .div__UserInfo {
+        margin-bottom: 20px;
+    
+    }
+    .div__UserInfo img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    .div__buttoms {
+        max-width: 143px;
+        gap: 15px;
+    }
+    .div__buttoms a, .div__logout a {
+        font-size: 12px;
+        height: 40px;
+        grid-template-columns: 50px 80px;   
+    }
+    .div__logout {
+        margin-top: 30px;
+        max-width: 143px;
+    }
+    .div__container{
+        max-height: 137px;
+        height: 100%;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        grid-template-columns: 150px repeat(4, 1fr);        
+    }
+    .div__search{
+        max-width: 122px;
+        width: 100%;
+        height: 37px;
+        padding: 14px;
+    }
+    .div__search input{
+        width: 80px;
+    }
+    main{
+        width: 100%;
+        gap: 15px;
+        padding-top: 20px;
+    }
+    .Section__header{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 98%;
+
+    }
+
+    .left__nav {
+        max-width: 150px;
+        height: 100%;
+    }
+    
+    .div__title h1 {
+        font-size: 10px;
+    }
+    .div__UserInfo {
+        margin-bottom: 20px;
+    
+    }
+    .div__UserInfo img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    .div__buttoms {
+        max-width: 143px;
+        gap: 15px;
+    }
+    .div__buttoms a, .div__logout a {
+        font-size: 12px;
+        height: 40px;
+        grid-template-columns: 50px 80px;   
+    }
+    .div__logout {
+        margin-top: 30px;
+        max-width: 143px;
+    }
+    .div__container{
+        max-height: 137px;
+        height: 100%;
+        display: flex;
+        border-radius: 8px;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
