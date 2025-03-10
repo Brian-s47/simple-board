@@ -1,9 +1,9 @@
 const ENV = async()=>{ // Obtener todos los usuarios del archivo json
-    let peticion = await fetch("../environment.json");
-    let data = await peticion.json();
-    return data
+    let peticion = await fetch("../environment.json"); // Hacer una solicitud a un archivo JSON
+    let data = await peticion.json();// Convertir la respuesta a formato JSON
+    return data // Retornar los datos obtenidos del archivo JSON
 }
-export const users = await ENV();
+export const users = await ENV(); // Ejecutar la función ENV y almacenar el resultado en 'users'
 
 export const validation = (data)=>{ // validar los usuarios del archivo json segun los datos obtenidos del formulario
     for (let i = 0; i < users.length; i++) {
