@@ -36,3 +36,18 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 6. **Tecnologías**: Tecnologías y herramientas utilizadas en el proyecto.
 
 Puedes adaptar esta plantilla dependiendo de las características de tu proyecto, si usas alguna herramienta adicional como preprocesadores (Sass, por ejemplo), herramientas de empaquetado (Webpack) o frameworks (React, Vue, etc.).
+
+### Estrctura Json:
+[
+   {
+      name: "Miguel Angel", 
+      email: "ma@gmail.com", 
+      phone: 123456789, 
+      enroll_number: 3456789,
+      payment_schedule : "First",
+      bill_number : 00012223,
+      amount_paid : INR 35,000,
+      balance_amount : INR 55,000, 
+      date : 08-Dec, 2021, 
+   }
+]

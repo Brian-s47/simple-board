@@ -4,10 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-payment.css">
-    <script src="js/main.js" defer type="module"></script>
+    <script src="../js/payment.js" defer type="module"></script>
     <title>Payment</title>
 </head>
 <body>
-    
+    <header class="Section__header">
+        <img id="img__back" src="../storage/img/back.svg">
+        <div class="div__rightArea">
+            <div class="div__search">
+                <input type="text" placeholder="search...">
+                <img id="img__search" src="../storage/img/search.png">
+            </div>
+            <img id="img__Vector" src="../storage/img/Vector.png">
+        </div>
+    </header>
+    <nav class="left__nav">
+        <div class="div__title">
+            <h1><img src="/storage/img/Line.png" alt=""> CRUD OPERATIONS</h1>
+        </div>
+        <div class="div__UserInfo">
+            <img src="/storage/img/photo.png">
+            <h2>Karthi Madesh</h2>
+            <p>Admin</p>
+        </div>
+        <div class="div__buttoms">
+            <a href="#"><img src="/storage/img/home.svg" alt=""> Home</a>
+            <a href="#"><img src="/storage/img/bookmark1.svg" alt=""> Course</a>
+            <a href="#"><img src="/storage/img/graduation-cap.svg" alt=""> Students</a>
+            <a href="#"><img src="/storage/img/usd-square1.svg" alt=""> Payment</a>
+            <a href="#"><img src="/storage/img/file-chart-line.svg" alt=""> Report</a>
+            <a href="#"><img src="/storage/img/sliders.svg" alt=""> Settings</a>
+        </div>
+        <div class="div__logout">
+            <a href="#">Logout <img src="/storage/img/log-out.svg" alt=""></a>
+        </div>
+    </nav>
+    <main>
+        <div class="div__container">
+            <div class="div__header">
+                <h2>Payment Details</h2>
+                <div class="div__headerButton">
+                    <img src="../storage/img/sort.png">
+                    <button id="add__paid" class="button__add">ADD NEW PAID</button>
+                </div>
+            </div>
+            <dialog id="dialog__add_paid" >
+                <div class="dialog__header">
+                    <span id="dialog__close">X</span>
+                </div>
+                <h2>Add new Paid</h2><br>
+                <div class="dialog__main">
+                    <form id="form__paid" action="?" method="post">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" value="Miguel Angel" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü ]+" name="name">
+                        </div>
+                        <div>
+                            <label for="">Payment Schedule</label>
+                            <input type="text" name="payment_schedule" value="First" placeholder="Payment Schedule">
+                        </div>
+                        <div>
+                            <label for="">Bill Number</label>
+                            <input type="number" name="bill_number" value="00012223" placeholder="Bill Number">
+                        </div>
+                        <div>
+                            <label for="">Amount</label>
+                            <input type="number" name="amount" value="50000" placeholder="Amount">
+                        </div>
+                        <div>
+                            <label for="">Balance amount</label>
+                            <input type="number" id="balance_amount" value="INR 35,000" name="balance_amount" placeholder="Balance Amount" readonly>
+                        </div>
+                        <div>
+                            <label for="">Date</label>
+                            <input type="date" name="date" placeholder="Date">
+                        </div>
+                    </form>
+                </div>
+                <div class="dialog__footer">
+                    <input type="submit" form="form__student" value="Ingresar pago">
+                </div>
+            </dialog>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Payment Schedule</th>
+                        <th>Bill Number</th>
+                        <th>Amount Paid</th>
+                        <th>Balance amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="table__payment">
+                </tbody>
+            </table>
+        </div>
+    </main>   
 </body>
 </html>
